@@ -11,19 +11,19 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(example_interfaces REQUIRED)
 
-add_executable(robot_news_station_node
+add_executable(robot_news_subscriber_node
   src/cpp_subscriber.cpp
   src/cpp_subscriber.hpp
   src/cpp_robot_news_subscriber.cpp
 )
 
-ament_target_dependencies(robot_news_station_node
+ament_target_dependencies(robot_news_subscriber_node
   rclcpp
   example_interfaces
 )
 
 install(TARGETS
-  # TODO
+  robot_news_subscriber_node
   DESTINATION lib/${PROJECT_NAME}
 )
 
