@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(cpp_publisher_pkg)
+project(cpp_subscriber_pkg)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -12,9 +12,9 @@ find_package(rclcpp REQUIRED)
 find_package(example_interfaces REQUIRED)
 
 add_executable(robot_news_station_node
-  src/robot_news_station_node.cpp
-  src/cpp_publisher.cpp
-  src/cpp_publisher.hpp
+  src/cpp_subscriber.cpp
+  src/cpp_subscriber.hpp
+  src/cpp_robot_news_subscriber.cpp
 )
 
 ament_target_dependencies(robot_news_station_node
@@ -23,7 +23,7 @@ ament_target_dependencies(robot_news_station_node
 )
 
 install(TARGETS
-  robot_news_station_node
+  # TODO
   DESTINATION lib/${PROJECT_NAME}
 )
 
