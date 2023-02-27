@@ -1,0 +1,8 @@
+build/*
+install/*
+log/*
+site/*
+/.vscode
+/src/image_common
+/src/image_pipeline
+/src/usb_cam
